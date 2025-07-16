@@ -1,0 +1,11 @@
+<h1>Blog</h1>
+
+<div class="wrapper">
+    @for (item of blogItems(); track item) {
+        <div class="blog-item">
+            <h2>{{ item.title }}</h2>
+            <p class="silent">{{ item.date | date }}</p>
+            <p class="text">{{ item.content }}</p>
+        </div>
+    }
+</div>
