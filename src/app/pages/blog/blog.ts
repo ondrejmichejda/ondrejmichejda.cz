@@ -13,9 +13,8 @@ import {DatePipe} from "@angular/common";
 })
 export class Blog implements OnInit {
 
-    private httpSvc = inject(HttpService)
-
     blogItems = signal<BlogItem[]>([]);
+    private httpSvc = inject(HttpService)
 
     ngOnInit() {
         this.httpSvc.getBlog().subscribe(items => this.blogItems.set(items));
